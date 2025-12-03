@@ -44,7 +44,7 @@ func readLinesFromFile(path string) []string {
 }
 
 func main() {
-	// run1()
+	run1()
 	run2()
 }
 
