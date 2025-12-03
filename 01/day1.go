@@ -1,10 +1,10 @@
-package main
+package day1
 
 import (
 	"fmt"
 	"strconv"
-	"os"
-	"bufio"
+
+	. "github.com/jkorona/aoc2025/utils"
 )
 
 var test = []string{
@@ -24,32 +24,14 @@ var test2 = []string{
 	"L300",
 }
 
-func readLinesFromFile(path string) []string {
-	f, err := os.Open(path)
-	if err != nil {
-		fmt.Println("Error opening file:", err)
-		return []string{}
-	}
-	defer f.Close()
 
-	scanner := bufio.NewScanner(f)
-	var lines []string
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-	if err := scanner.Err(); err != nil {
-		return []string{}
-	}
-	return lines
-}
-
-func main() {
+func Run() {
 	run1()
 	run2()
 }
 
 func run1() {
-	var input = readLinesFromFile("./input_01.txt")
+	var input = ReadLinesFromFile("./01/input.txt")
 	
 	var currPos = 50;
 	var counter = 0;
@@ -78,7 +60,7 @@ func run1() {
 }
 
 func run2() {
-	var input = readLinesFromFile("./input_01.txt")
+	var input = ReadLinesFromFile("./01/input.txt")
 	
 	var currPos = 50;
 	var counter = 0;

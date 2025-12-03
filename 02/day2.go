@@ -1,30 +1,22 @@
-package main
+package day2
 
 import (
 	"fmt"
 	"strconv"
 	"strings"
-	"os"
+
+	. "github.com/jkorona/aoc2025/utils"
 )
 
 var test = `11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124`;
 
-func ReadFile(filePath string) string {
-	data, err := os.ReadFile(filePath)
-	if err != nil {
-		fmt.Println("Error reading file:", err)
-		return ""
-	}
-	return string(data)
-}
-
-func main() {
-	// run1()
+func Run() {
+	run1()
 	run2()
 }
 
 func run1() {
-	input := ReadFile("./input.txt")
+	input := ReadFile("./02/input.txt")
 	ranges := strings.Split(input, ",")
 	sum := 0
 
@@ -60,7 +52,7 @@ func hasRepeatingPatterns(s string) bool {
 }
 
 func run2() {
-	input := ReadFile("./input.txt")
+	input := ReadFile("./02/input.txt")
 	ranges := strings.Split(input, ",")
 	sum := 0
 
