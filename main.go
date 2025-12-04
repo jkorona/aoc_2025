@@ -4,16 +4,17 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/jkorona/aoc2025/01"
-	"github.com/jkorona/aoc2025/02"
-	"github.com/jkorona/aoc2025/03"
+	day1 "github.com/jkorona/aoc2025/01"
+	day2 "github.com/jkorona/aoc2025/02"
+	day3 "github.com/jkorona/aoc2025/03"
+	day4 "github.com/jkorona/aoc2025/04"
 )
 
-// create map of day packages and run main of each
 var solutions = map[string]func(){
 	"1": day1.Run,
 	"2": day2.Run,
 	"3": day3.Run,
+	"4": day4.Run,
 }
 
 func main() {
