@@ -8,6 +8,7 @@ import (
 	day2 "github.com/jkorona/aoc2025/02"
 	day3 "github.com/jkorona/aoc2025/03"
 	day4 "github.com/jkorona/aoc2025/04"
+	day5 "github.com/jkorona/aoc2025/05"
 )
 
 var solutions = map[string]func(){
@@ -15,6 +16,7 @@ var solutions = map[string]func(){
 	"2": day2.Run,
 	"3": day3.Run,
 	"4": day4.Run,
+	"5": day5.Run,
 }
 
 func main() {
